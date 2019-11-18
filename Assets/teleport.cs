@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class teleport : MonoBehaviour
@@ -17,8 +18,9 @@ public class teleport : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
         if (other.collider.CompareTag("wall")) {
-            obj.transform.position = new Vector3(teleportPoint.transform.position.x, obj.transform.position.y, 
+            obj.transform.position = new Vector3(teleportPoint.transform.position.x - ((float) 2.98), obj.transform.position.y, 
                 teleportPoint.transform.position.z);
+            Console.WriteLine("something");
         }
     }
 
