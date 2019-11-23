@@ -1610,12 +1610,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc78f42e295d5c04ea5966fc2b206f6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &352551687 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5432711012411117778, guid: f3f35848ab9018143ac0f7afbeb08d9b,
+    type: 3}
+  m_PrefabInstance: {fileID: 631848437}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &352551688 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1382471183214584871, guid: f3f35848ab9018143ac0f7afbeb08d9b,
     type: 3}
   m_PrefabInstance: {fileID: 631848437}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &352551691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352551687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87dfc2ac3531446618b27c6f35c8c3e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alias: {fileID: 1801056921}
+  x: 1
+  y: 1
+  z: 1
+  x_change: 9.6
+  y_change: 4
+  z_change: -35.4
 --- !u!1 &379512033
 GameObject:
   m_ObjectHideFlags: 0
@@ -3240,8 +3265,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Touched.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 11500000, guid: 87dfc2ac3531446618b27c6f35c8c3e9,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 3035623330357515798, guid: f3f35848ab9018143ac0f7afbeb08d9b,
         type: 3}
       propertyPath: m_UseGravity
@@ -3255,7 +3279,7 @@ PrefabInstance:
     - target: {fileID: 5198062388227288940, guid: f3f35848ab9018143ac0f7afbeb08d9b,
         type: 3}
       propertyPath: CollisionStarted.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5198062388227288940, guid: f3f35848ab9018143ac0f7afbeb08d9b,
         type: 3}
@@ -3266,7 +3290,7 @@ PrefabInstance:
         type: 3}
       propertyPath: CollisionStarted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 352551691}
     - target: {fileID: 5198062388227288940, guid: f3f35848ab9018143ac0f7afbeb08d9b,
         type: 3}
       propertyPath: CollisionStarted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -6853,8 +6877,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 21.419556, y: 1.8936603, z: 13.332015}
-  m_Center: {x: -0.96601367, y: 6.634361, z: 3.8838603}
+  m_Size: {x: 16.842604, y: 2.663938, z: 13.332015}
+  m_Center: {x: 1.2184459, y: 4.934864, z: 3.8838603}
 --- !u!64 &1331546444
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -9014,6 +9038,7 @@ GameObject:
   - component: {fileID: 1788583604}
   - component: {fileID: 1788583614}
   - component: {fileID: 1788583613}
+  - component: {fileID: 1788583615}
   m_Layer: 0
   m_Name: Collidors
   m_TagString: Untagged
@@ -9178,6 +9203,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.57, y: 1.6, z: 0.29}
   m_Center: {x: -2.25, y: 1.68, z: 6.14}
+--- !u!65 &1788583615
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788583602}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.99999976, y: 7.21348, z: 4.4199915}
+  m_Center: {x: 9.3001, y: 2.439303, z: 3.5400167}
 --- !u!1001 &1792741629
 PrefabInstance:
   m_ObjectHideFlags: 0
