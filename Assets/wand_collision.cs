@@ -9,10 +9,12 @@ public class wand_collision : MonoBehaviour
     
     public void OnCollisionEnter(Collision collision)
     {
-
+        if(collision.gameObject.name=="box")
+        {
             box.SetActive(false);
             trophy.SetActive(true);
-  
+        }
+            
     }
 
     // Start is called before the first frame update
