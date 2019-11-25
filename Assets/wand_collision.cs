@@ -6,6 +6,7 @@ public class wand_collision : MonoBehaviour
 {
     public GameObject box;
     public GameObject trophy;
+    public GameObject sound;
     
     public void OnCollisionEnter(Collision collision)
     {
@@ -14,7 +15,23 @@ public class wand_collision : MonoBehaviour
             box.SetActive(false);
             trophy.SetActive(true);
         }
-            
+        if (collision.gameObject.name == "distraction small 2")
+        {
+            sound.SetActive(true);
+        }
+        if (collision.gameObject.name == "distraction small")
+        {
+            sound.SetActive(true);
+        }
+        if (collision.gameObject.name == "distraction box")
+        {
+            sound.SetActive(true);
+        }
+        if (collision.gameObject.name == "distraction box 2")
+        {
+            sound.SetActive(true);
+        }
+
     }
 
     // Start is called before the first frame update
