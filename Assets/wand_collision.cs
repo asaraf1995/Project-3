@@ -7,13 +7,15 @@ public class wand_collision : MonoBehaviour
     public GameObject box;
     public GameObject trophy;
     public GameObject sound;
-    
+    public GameObject hint;
+
     public void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.name=="box")
         {
             box.SetActive(false);
             trophy.SetActive(true);
+            hint.SetActive(true);
         }
         if (collision.gameObject.name == "distraction small 2")
         {
