@@ -7,6 +7,10 @@ public class wand_collision : MonoBehaviour
     public GameObject box;
     public GameObject trophy;
     public GameObject sound;
+    public GameObject dementor;
+    public GameObject dementor1;
+    public GameObject dementor_effects;
+    public GameObject dementor_effects1;
     public GameObject hint;
 
     public void OnCollisionEnter(Collision collision)
@@ -32,6 +36,17 @@ public class wand_collision : MonoBehaviour
         if (collision.gameObject.name == "distraction box 2")
         {
             sound.SetActive(true);
+        }
+        if (collision.gameObject.name == "Dementor")
+        {
+//yield return new WaitForSeconds(2);
+            dementor.SetActive(false);
+            dementor_effects1.SetActive(true);
+        }
+        if (collision.gameObject.name == "Dementor 1")
+        {
+            dementor1.SetActive(false);
+            dementor_effects.SetActive(true);
         }
 
     }
