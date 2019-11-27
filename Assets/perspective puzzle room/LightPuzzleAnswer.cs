@@ -9,6 +9,9 @@ public class LightPuzzleAnswer : MonoBehaviour
     public GameObject wheel03;
     public GameObject wheel04;
     public GameObject congrats;
+    public AudioSource sfx;
+
+    private bool sfxPlayed = false;
 
 // Start is called before the first frame update
 void Start()
@@ -37,6 +40,11 @@ void Start()
             && wheel04.transform.eulerAngles.z >= 90.0f && wheel04.transform.eulerAngles.z <= 105.0f)
         {
             correct = true;
+            if (sfxPlayed == false)
+            {
+                sfx.Play();
+                sfxPlayed = true;
+            }
         }
         congrats.SetActive(correct);
     }
