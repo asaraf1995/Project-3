@@ -7,6 +7,7 @@ public class wand_collision : MonoBehaviour
     public GameObject box;
     public GameObject trophy;
     public GameObject sound;
+    public GameObject boxhint;
     public GameObject dementor;
     public GameObject dementor1;
     public GameObject dementor_effects;
@@ -20,6 +21,7 @@ public class wand_collision : MonoBehaviour
             box.SetActive(false);
             trophy.SetActive(true);
             hint.SetActive(true);
+            boxhint.SetActive(true);
         }
         if (collision.gameObject.name == "distraction small 2")
         {
