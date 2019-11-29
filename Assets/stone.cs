@@ -10,31 +10,67 @@ public class stone : MonoBehaviour
     public GameObject sound;
     public GameObject alias;
     public static int count;
-    public float x_change = 0.1f;
-    public float y_change = 0.1f;
-    public float z_change = 0.1f;
+    public bool flag;
+    public static int flagcount;
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.name == "Platform 1")
         {
-            count = count + 1;
-            sound.SetActive(true);
+            if (flagcount == 0)
+            {
+                flag = true;
+                flagcount += 1;
 
+                if (flag)
+                {
+                    count = count + 1;
+                    //sound.SetActive(false);
+                    sound.SetActive(true);
+                    flagcount = 0;
+                    flag = false;
+                }
+            }
+            
         }
         else if (collision.gameObject.name == "Platform 2")
         {
-            count = count + 1;
-            sound.SetActive(true);
+            if (flagcount == 0)
+            {
+                flag = true;
+                flagcount += 1;
+
+                if (flag)
+                {
+                    count = count + 1;
+                    //sound.SetActive(false);
+                    sound.SetActive(true);
+                    flagcount = 0;
+                    flag = false;
+                }
+            }
         }
         else if (collision.gameObject.name == "Platform 3")
         {
-            count = count + 1;
-            sound.SetActive(true);
+            if (flagcount == 0)
+            {
+                flag = true;
+                flagcount += 1;
+
+                if (flag)
+                {
+                    count = count + 1;
+                   // sound.SetActive(false);
+                    sound.SetActive(true);
+                    flagcount = 0;
+                    flag = false;
+                }
+            }
         }
         if (count == 3)
         {
-            alias.transform.localPosition = new Vector3(x_change, y_change, z_change);
+            alias.transform.localPosition = new Vector3(8.0f, 2.0f, -1.0f);
         }
+        //sound.SetActive(false);
     }
     
         // Start is called before the first frame update
