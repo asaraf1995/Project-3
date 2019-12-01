@@ -7,7 +7,9 @@ public class stone : MonoBehaviour
     public GameObject platform1;
     public GameObject platform2;
     public GameObject platform3;
-    public GameObject sound;
+    public GameObject sound1;
+    public GameObject sound2;
+    public GameObject sound3;
     public GameObject alias;
     public static int count;
     public bool flag;
@@ -25,7 +27,7 @@ public class stone : MonoBehaviour
                 {
                     count = count + 1;
                     //sound.SetActive(false);
-                    sound.SetActive(true);
+                    sound1.SetActive(true);
                     flagcount = 0;
                     flag = false;
                 }
@@ -43,7 +45,7 @@ public class stone : MonoBehaviour
                 {
                     count = count + 1;
                     //sound.SetActive(false);
-                    sound.SetActive(true);
+                    sound2.SetActive(true);
                     flagcount = 0;
                     flag = false;
                 }
@@ -60,7 +62,7 @@ public class stone : MonoBehaviour
                 {
                     count = count + 1;
                    // sound.SetActive(false);
-                    sound.SetActive(true);
+                    sound3.SetActive(true);
                     flagcount = 0;
                     flag = false;
                 }
